@@ -22,7 +22,7 @@ model = joblib.load("models/churn_model.pkl")
 # LOAD DATA
 # -------------------------
 
-data = pd.read_csv(r"C:\Users\haida\OneDrive\Desktop\Churn_Modelling.csv")
+data =pd.read_csv("data/Churn_Modelling.csv")
 
 if "Surname" in data.columns:
     data = data.drop(columns=["Surname"])
