@@ -22,10 +22,11 @@ model = joblib.load("models/churn_model.pkl")
 # LOAD DATA
 # -------------------------
 
-data = pd.read_csv(r"C:\Users\haida\OneDrive\Desktop\Churn_Modelling.csv")
+uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
 
-if "Surname" in data.columns:
-    data = data.drop(columns=["Surname"])
+if uploaded_file is not None:
+    data = pd.read_csv(uploaded_file)
+    st.write(data.head())
 
 # Encode dataset
 data["Gender"] = data["Gender"].map({"Male":1,"Female":0})
