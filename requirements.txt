@@ -1,8 +1,8 @@
 streamlit
 pandas
 numpy
-scikit-learn==1.3.2
-xgboost==1.7.6
+xgboost
 plotly
+scikit-learn
 joblib
-pillow>=9.5.0
+reportlab
